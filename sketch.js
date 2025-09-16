@@ -1,5 +1,5 @@
 // Project Title Shooting Demo
-// Your Name
+// Your Name Jayson
 
 // player position variables
 let pX = 50;
