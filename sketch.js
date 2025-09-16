@@ -8,50 +8,42 @@ let pY = 200;
 // projectile positions
 
 
-function setup()
-{
+function setup() {
     createCanvas(600, 400);
     background(240);
 }
 
-function draw()
-{
+function draw() {
     background(240);
     noStroke()
 
     movePlayer();
 
-    drawPlayer();
+    drawPlayer(pX, pY);
 
     // drawProjectiles();
 }
 
-function drawPlayer(x, y)
-{
+function drawPlayer(x, y) {
     fill('green');
     ellipse(x, y, 40, 80);
 }
 
-function movePlayer()
-{
-    if (keyIsDown(87))
-    { // w key
+function movePlayer() {
+    if (keyIsDown(83) || keyIsDown(40)) { // w & arrow up key
         pY += 5;
     }
-    if (keyIsDown(83))
-    { // s key
+    if (keyIsDown(87) || keyIsDown(38)) { // s & arrow down key
         pY -= 5;
     }
 }
 
-function keyPressed()
-{
+function keyPressed() {
     print(keyCode);
 }
 
 //update and draw projectiles
-function drawProjectiles()
-{
+function drawProjectiles() {
     fill('red');
 
 
