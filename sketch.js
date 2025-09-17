@@ -75,8 +75,8 @@ function drawProjectiles() {
                 projectileXs.splice(i, i);
                 projectileYs.splice(i, i);
                 background('red');
-                enemyX = random(300, 600);
-                enemyY = random(0, 400);
+                enemyX = random(300, 550);
+                enemyY = random(50, 350);
                 headShot.play();
                 score += 1;
             }
