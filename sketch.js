@@ -2,13 +2,14 @@
 
 // Your Name Jayson
 
-// player position variables
+// variables
 
 let pX = 50;
 let pY = 200;
 let enemyX = 550;
 let enemyY = 200;
 let headShot;
+let score = 0;
 
 // projectile positions
 let projectileXs = [];
@@ -34,8 +35,9 @@ function draw() {
 
     drawProjectiles();
 
-
-    rect(enemyX, enemyY, 50, 100)
+    rect(enemyX, enemyY, 50, 100);
+    fill('black');
+    text("Score: " + score, 10, 20);
 }
 
 function drawPlayer(x, y) {
@@ -46,11 +48,9 @@ function drawPlayer(x, y) {
 function movePlayer() {
     if (keyIsDown(83) || keyIsDown(40)) { // w & arrow up key
         pY += 5;
-
     }
     if (keyIsDown(87) || keyIsDown(38)) { // s & arrow down key
         pY -= 5;
-
     }
 }
 
@@ -78,6 +78,7 @@ function drawProjectiles() {
                 enemyX = random(300, 600);
                 enemyY = random(0, 400);
                 headShot.play();
+                score += 1;
             }
         }
     }
