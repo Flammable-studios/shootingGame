@@ -38,6 +38,12 @@ function draw() {
     rect(enemyX, enemyY, 50, 100);
     fill('black');
     text("Score: " + score, 10, 20);
+    if (pY > 360) {
+        pY = 360;
+    }
+    if (pY < 40) {
+        pY = 40;
+    }
 }
 
 function drawPlayer(x, y) {
